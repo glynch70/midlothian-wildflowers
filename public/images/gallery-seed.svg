@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-label="Native seed collection for future planting">
+  <rect width="900" height="675" fill="#f8f6f0"/><ellipse cx="450" cy="405" rx="250" ry="120" fill="#e8efdd"/>
+  <g fill="#8b6f3e"><ellipse cx="350" cy="380" rx="35" ry="16" transform="rotate(-25 350 380)"/><ellipse cx="450" cy="430" rx="35" ry="16" transform="rotate(18 450 430)"/><ellipse cx="560" cy="365" rx="35" ry="16" transform="rotate(-12 560 365)"/></g>
+  <path d="M250 515c115 55 282 65 410 0" fill="none" stroke="#4B6F2E" stroke-width="20" stroke-linecap="round"/>
+</svg>

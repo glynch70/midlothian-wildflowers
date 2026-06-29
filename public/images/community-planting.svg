@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" role="img" aria-label="Volunteers planting native wildflowers together">
+  <rect width="1000" height="800" fill="#e8efdd"/>
+  <path d="M0 520c165-80 314-93 470-34 182 68 327 47 530-41v355H0z" fill="#4B6F2E"/>
+  <circle cx="255" cy="292" r="62" fill="#f8d0b0"/><path d="M175 378h160l52 240H125z" fill="#355322"/>
+  <circle cx="610" cy="270" r="58" fill="#f4c7a1"/><path d="M532 350h150l56 250H480z" fill="#6f8f51"/>
+  <path d="M390 580c65-95 150-130 260-102" fill="none" stroke="#f8f6f0" stroke-width="18" stroke-linecap="round"/>
+  <g fill="#f5d55c"><circle cx="440" cy="620" r="18"/><circle cx="520" cy="570" r="14"/><circle cx="655" cy="604" r="16"/></g>
+</svg>

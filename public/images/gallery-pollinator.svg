@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 675" role="img" aria-label="Pollinator visiting a native flower">
+  <rect width="900" height="675" fill="#e8efdd"/><circle cx="460" cy="325" r="92" fill="#f5d55c"/>
+  <g fill="#f8f6f0"><ellipse cx="460" cy="190" rx="48" ry="92"/><ellipse cx="460" cy="460" rx="48" ry="92"/><ellipse cx="325" cy="325" rx="92" ry="48"/><ellipse cx="595" cy="325" rx="92" ry="48"/></g>
+  <ellipse cx="555" cy="250" rx="76" ry="34" fill="#243119"/><path d="M520 238h70" stroke="#f5d55c" stroke-width="10"/>
+</svg>

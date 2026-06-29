@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" role="img" aria-label="Community volunteers restoring a meadow edge">
+  <rect width="1000" height="800" fill="#f8f6f0"/>
+  <path d="M0 360c195-70 345-83 515-22 176 63 313 48 485-31v493H0z" fill="#8aa66a"/>
+  <path d="M0 520c210-95 420-94 595-26 170 66 286 48 405-15v321H0z" fill="#355322"/>
+  <g fill="#243119"><circle cx="260" cy="315" r="34"/><circle cx="500" cy="292" r="34"/><circle cx="725" cy="328" r="34"/></g>
+  <g fill="#ffffff"><path d="M210 370h100l35 180H175z"/><path d="M450 350h100l35 190H415z"/><path d="M675 385h100l35 165H640z"/></g>
+  <g fill="#f5d55c"><circle cx="165" cy="650" r="14"/><circle cx="354" cy="612" r="16"/><circle cx="580" cy="668" r="15"/><circle cx="832" cy="605" r="16"/></g>
+</svg>
