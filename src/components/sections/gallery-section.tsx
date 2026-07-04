@@ -10,7 +10,7 @@ export function GallerySection() {
           <SectionHeading
             eyebrow="Gallery"
             title="A Growing Patchwork of Local Action"
-            text="A simple placeholder gallery for now, ready to be replaced with client photography from project days, wildlife sightings and community events."
+            text="Real project moments, wildlife sightings and volunteer days from the Midlothian Wildflowers community."
           />
         </FadeIn>
         <FadeIn className="mt-12">

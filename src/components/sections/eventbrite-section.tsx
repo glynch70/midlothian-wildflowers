@@ -13,8 +13,7 @@ export function EventbriteSection() {
             <CalendarDays className="mb-5 text-white/80" aria-hidden="true" />
             <h2 className="font-heading text-4xl font-bold md:text-5xl">Upcoming Events</h2>
             <p className="mt-4 max-w-2xl leading-8 text-white/82">
-              Join seasonal planting days, guided nature sessions and community conservation events across Midlothian.
-              Event listings are managed through Eventbrite so visitors can register quickly.
+              Join us for nature walks, conservation activities, workshops and community events.
             </p>
           </div>
           <Button asChild size="lg" variant="secondary">

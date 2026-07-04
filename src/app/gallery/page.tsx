@@ -15,7 +15,7 @@ export default function GalleryPage() {
         <SectionHeading
           eyebrow="Gallery"
           title="Projects, Wildlife, Events, Volunteers and Habitats"
-          text="These placeholder images show the intended structure for the client photography library."
+          text="Browse real photographs from Midlothian Wildflowers projects, wildlife observations and community activity."
           level="h1"
         />
         <div className="mt-12">

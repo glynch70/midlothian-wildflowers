@@ -7,7 +7,14 @@ import { siteImages } from "@/lib/images";
 export function Hero() {
   return (
     <section className="relative min-h-[calc(100vh-5rem)] overflow-hidden bg-primary-dark text-white">
-      <Image src={siteImages.hero.src} alt={siteImages.hero.alt} fill priority className="object-cover" />
+      <Image
+        src={siteImages.hero.src}
+        alt={siteImages.hero.alt}
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/85 via-primary-dark/55 to-primary-dark/20" />
       <div className="container relative flex min-h-[calc(100vh-5rem)] items-center py-16">
         <div className="max-w-3xl">

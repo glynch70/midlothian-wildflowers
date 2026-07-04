@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { projectCards } from "@/lib/content";
 import { Card } from "@/components/ui/card";
 import { FadeIn } from "@/components/sections/fade-in";
@@ -19,10 +21,21 @@ export function ProjectCards() {
             const Icon = project.icon;
             return (
               <FadeIn key={project.title}>
-                <Card className="h-full p-6">
-                  <Icon className="mb-5 text-primary" aria-hidden="true" />
-                  <h3 className="font-heading text-2xl font-bold text-primary-dark">{project.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-foreground/72">{project.text}</p>
+                <Card className="h-full overflow-hidden">
+                  <div className="relative aspect-[4/3] bg-soft-grey">
+                    <Image
+                      src={project.image.src}
+                      alt={project.image.alt}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <Icon className="mb-5 text-primary" aria-hidden="true" />
+                    <h3 className="font-heading text-2xl font-bold text-primary-dark">{project.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-foreground/72">{project.text}</p>
+                  </div>
                 </Card>
               </FadeIn>
             );

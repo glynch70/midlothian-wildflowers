@@ -11,7 +11,13 @@ export function VolunteerCTA() {
     <section className="section-padding bg-cream">
       <div className="container grid items-center gap-10 lg:grid-cols-2">
         <div className="relative aspect-[5/4] overflow-hidden rounded-[8px] shadow-soft">
-          <Image src={siteImages.volunteer.src} alt={siteImages.volunteer.alt} fill className="object-cover" />
+          <Image
+            src={siteImages.volunteer.src}
+            alt={siteImages.volunteer.alt}
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
         </div>
         <div>
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-primary">Get involved</p>

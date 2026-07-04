@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -7,6 +8,7 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/lib/content";
+import { siteImages } from "@/lib/images";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -16,8 +18,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-primary/10 bg-cream/95 backdrop-blur">
       <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="focus-ring rounded-full" onClick={() => setOpen(false)}>
-          <span className="font-heading text-2xl font-bold text-primary-dark">Midlothian Wildflowers</span>
+        <Link href="/" className="focus-ring flex items-center gap-3 rounded-full" onClick={() => setOpen(false)}>
+          <Image
+            src={siteImages.logo.src}
+            alt=""
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-full object-cover"
+            priority
+          />
+          <span className="font-heading text-xl font-bold text-primary-dark sm:text-2xl">Midlothian Wildflowers</span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">

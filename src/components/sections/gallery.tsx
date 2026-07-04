@@ -24,7 +24,13 @@ export function Gallery({ showCategories = false }: GalleryProps) {
             className="group relative aspect-[4/3] overflow-hidden rounded-[8px] bg-soft-grey text-left shadow-soft focus-ring"
             onClick={() => setActive(image)}
           >
-            <Image src={image.src} alt={image.alt} fill className="object-cover transition duration-500 group-hover:scale-105" />
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover transition duration-500 group-hover:scale-105"
+            />
             <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary-dark/82 to-transparent p-5 text-white">
               {showCategories ? <span className="block text-xs font-bold uppercase tracking-[0.14em]">{image.category}</span> : null}
               <span className="block font-heading text-2xl font-bold">{image.alt}</span>
@@ -52,7 +58,7 @@ export function Gallery({ showCategories = false }: GalleryProps) {
               <X aria-hidden="true" />
             </Button>
             <div className="relative aspect-[16/10] overflow-hidden rounded-[8px] bg-white">
-              <Image src={active.src} alt={active.alt} fill className="object-cover" />
+              <Image src={active.src} alt={active.alt} fill sizes="90vw" className="object-cover" />
             </div>
           </div>
         </div>
