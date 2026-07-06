@@ -13,41 +13,61 @@ export const siteImages = {
     alt: "A white butterfly feeding on purple thistle flowers with a soft meadow background",
   },
   about: {
-    src: "/images/projects/bat-box-project.jpg",
-    alt: "A Midlothian Wildflowers volunteer holding handmade habitat boxes and a carved organisation sign",
+    src: "/images/projects/community-project-work.jpg",
+    alt: "Midlothian Wildflowers volunteers working together on a community greenspace project",
   },
   volunteer: {
-    src: "/images/volunteers/male&female.jpg",
-    alt: "Two Midlothian Wildflowers volunteers standing with tools during meadow restoration work",
+    src: "/images/volunteers/collecting-fungi.jpg",
+    alt: "Midlothian Wildflowers volunteers exploring plants and fungi in a green community habitat",
   },
   projects: [
     {
-      src: "/images/projects/bat-box-project.jpg",
-      alt: "Volunteer with handmade bat boxes and Midlothian Wildflowers sign",
+      src: "/images/projects/community-project-work.jpg",
+      alt: "Volunteers carrying out practical habitat work in a community greenspace",
       category: "Projects",
     },
     {
-      src: "/images/projects/seed-collection.jpg",
-      alt: "Native seeds collected in volunteers' hands for future planting",
+      src: "/images/projects/polytunnel-growing.jpg",
+      alt: "Volunteer preparing growing trays in a polytunnel",
+      category: "Projects",
+    },
+    {
+      src: "/images/projects/organic-vegetable-harvest.jpg",
+      alt: "Crate of organic vegetables and herbs grown through a community project",
+      category: "Projects",
+    },
+    {
+      src: "/images/projects/community-scything.jpg",
+      alt: "Volunteer demonstrating community scything with an Austrian scythe",
       category: "Projects",
     },
   ],
   events: [
     {
-      src: "/images/events/community-volunteer-day.jpg",
-      alt: "Community volunteers outdoors with tools during a habitat restoration day",
+      src: "/images/events/happy-child-workshop.jpg",
+      alt: "Child smiling during an outdoor nature workshop",
+      category: "Events",
+    },
+    {
+      src: "/images/events/pond-learning-session.jpg",
+      alt: "Community learning session beside a pond habitat",
+      category: "Events",
+    },
+    {
+      src: "/images/events/community-project-work.jpg",
+      alt: "Volunteers taking part in a practical community conservation session",
       category: "Events",
     },
   ],
   wildlife: [
     {
-      src: "/images/wildlife/ladybird-native-plant.jpg",
-      alt: "Ladybird on native vegetation in a Midlothian habitat",
+      src: "/images/wildlife/native-wildflower.jpg",
+      alt: "Native pink wildflower growing in grassland",
       category: "Wildlife",
     },
     {
-      src: "/images/wildlife/red-admiral-butterfly.jpg",
-      alt: "Red admiral butterfly resting on stone",
+      src: "/images/wildlife/fungi-closeup.jpg",
+      alt: "Close-up of an orange fungus found in a local landscape",
       category: "Wildlife",
     },
     {
@@ -58,23 +78,48 @@ export const siteImages = {
   ],
   gallery: [
     {
-      src: "/images/gallery/volunteer-meadow-raking.jpg",
-      alt: "Volunteer celebrating meadow care work with a rake",
+      src: "/images/gallery/community-project-work.jpg",
+      alt: "Volunteers carrying out practical habitat work in a community greenspace",
       category: "Volunteers",
     },
     {
-      src: "/images/gallery/bat-box-project.jpg",
-      alt: "Handmade bat boxes and Midlothian Wildflowers project sign",
+      src: "/images/gallery/collecting-fungi.jpg",
+      alt: "Volunteers exploring plants and fungi in a green habitat",
+      category: "Volunteers",
+    },
+    {
+      src: "/images/gallery/happy-child-workshop.jpg",
+      alt: "Child smiling during a nature craft workshop",
+      category: "Events",
+    },
+    {
+      src: "/images/gallery/polytunnel-growing.jpg",
+      alt: "Volunteer preparing growing trays in a polytunnel",
       category: "Projects",
     },
     {
-      src: "/images/gallery/ladybird-native-plant.jpg",
-      alt: "Ladybird on native vegetation",
+      src: "/images/gallery/organic-vegetable-harvest.jpg",
+      alt: "Crate of fresh organic vegetables and herbs from a growing project",
+      category: "Projects",
+    },
+    {
+      src: "/images/gallery/community-scything.jpg",
+      alt: "Volunteer demonstrating an Austrian scythe",
+      category: "Projects",
+    },
+    {
+      src: "/images/gallery/pond-learning-session.jpg",
+      alt: "Community learning session beside a pond habitat",
+      category: "Events",
+    },
+    {
+      src: "/images/gallery/native-wildflower.jpg",
+      alt: "Close-up of a native pink wildflower",
       category: "Wildlife",
     },
     {
-      src: "/images/gallery/red-admiral-butterfly.jpg",
-      alt: "Red admiral butterfly with open wings",
+      src: "/images/gallery/fungi-closeup.jpg",
+      alt: "Close-up of an orange fungus found in the landscape",
       category: "Wildlife",
     },
     {

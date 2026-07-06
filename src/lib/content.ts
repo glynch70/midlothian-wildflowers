@@ -52,8 +52,8 @@ export const projectCards = [
     text: "Encouraging, adopting and improving greenspaces with support from local people.",
     icon: Sprout,
     image: {
-      src: "/images/gallery/volunteer-meadow-raking.jpg",
-      alt: "Volunteer caring for a meadow area with a rake",
+      src: "/images/projects/community-project-work.jpg",
+      alt: "Midlothian Wildflowers volunteers carrying out practical habitat work in a community greenspace",
     },
   },
   {
@@ -61,8 +61,8 @@ export const projectCards = [
     text: "Creating and caring for habitats that give native plants and pollinators room to thrive.",
     icon: Flower2,
     image: {
-      src: "/images/wildlife/red-admiral-butterfly.jpg",
-      alt: "Red admiral butterfly recorded in a local habitat",
+      src: "/images/wildlife/native-wildflower.jpg",
+      alt: "Close-up of a native pink wildflower growing in grassland",
     },
   },
   {
@@ -70,8 +70,8 @@ export const projectCards = [
     text: "Running walks, talks, demos and practical workshops that help people learn outdoors.",
     icon: CalendarDays,
     image: {
-      src: "/images/events/community-volunteer-day.jpg",
-      alt: "Community volunteers outdoors during a conservation activity",
+      src: "/images/events/happy-child-workshop.jpg",
+      alt: "Child smiling during a Midlothian Wildflowers outdoor learning activity",
     },
   },
   {
@@ -79,8 +79,8 @@ export const projectCards = [
     text: "Developing organic growing skills, plant sales and permaculture work at Polton.",
     icon: Wheat,
     image: {
-      src: "/images/wildlife/happygarden.jpg",
-      alt: "A productive garden space with wildlife-friendly planting",
+      src: "/images/projects/organic-vegetable-harvest.jpg",
+      alt: "Volunteer holding a crate of organically grown vegetables and herbs",
     },
   },
   {
@@ -88,8 +88,8 @@ export const projectCards = [
     text: "Welcoming volunteers into practical habitat creation and woodland care sessions.",
     icon: Trees,
     image: {
-      src: "/images/projects/bat-box-project.jpg",
-      alt: "Habitat boxes made for a Midlothian Wildflowers project",
+      src: "/images/projects/pond-learning-session.jpg",
+      alt: "Community learning session beside a pond and planted habitat",
     },
   },
   {
@@ -97,8 +97,8 @@ export const projectCards = [
     text: "Sharing Austrian scything skills for meadow management, bracken removal and orchard care.",
     icon: Scissors,
     image: {
-      src: "/images/volunteers/rake.jpg",
-      alt: "Midlothian Wildflowers volunteer using hand tools outdoors",
+      src: "/images/projects/community-scything.jpg",
+      alt: "Volunteer demonstrating an Austrian scythe in a grassy community space",
     },
   },
 ];
