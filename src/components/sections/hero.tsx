@@ -23,7 +23,8 @@ export function Hero() {
             Protecting and Restoring Wild Spaces Across Midlothian
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/88 md:text-xl">
-            Supporting biodiversity, community wellbeing and conservation through volunteer-led environmental projects.
+            A grassroots community group caring for greenspaces, supporting biodiversity and creating welcoming
+            opportunities for people across Midlothian.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg">

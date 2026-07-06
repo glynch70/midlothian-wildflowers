@@ -11,7 +11,8 @@ export function Footer() {
         <div>
           <h2 className="font-heading text-3xl font-bold">Midlothian Wildflowers</h2>
           <p className="mt-4 max-w-sm text-sm leading-6 text-white/80">
-            Community-led conservation, wildflower planting and habitat restoration across Midlothian.
+            A constituted grassroots community group caring for greenspaces, wildlife and community wellbeing across
+            Midlothian.
           </p>
         </div>
 

@@ -1,9 +1,13 @@
+import { CurrentActivities } from "@/components/sections/current-activities";
+import { DonationsSection } from "@/components/sections/donations-section";
 import { EventbriteSection } from "@/components/sections/eventbrite-section";
 import { FacebookCTA } from "@/components/sections/facebook-cta";
 import { GallerySection } from "@/components/sections/gallery-section";
 import { Hero } from "@/components/sections/hero";
 import { Mission } from "@/components/sections/mission";
+import { PartnersSection } from "@/components/sections/partners-section";
 import { ProjectCards } from "@/components/sections/project-cards";
+import { TrustSection } from "@/components/sections/trust-section";
 import { VolunteerCTA } from "@/components/sections/volunteer-cta";
 
 export default function Home() {
@@ -12,9 +16,13 @@ export default function Home() {
       <Hero />
       <Mission />
       <ProjectCards />
+      <CurrentActivities />
       <GallerySection />
       <EventbriteSection />
       <VolunteerCTA />
+      <DonationsSection />
+      <PartnersSection />
+      <TrustSection />
       <FacebookCTA />
     </>
   );

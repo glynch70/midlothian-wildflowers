@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 
+import { CurrentActivities } from "@/components/sections/current-activities";
 import { FeatureCards } from "@/components/sections/feature-cards";
+import { PartnersSection } from "@/components/sections/partners-section";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { VolunteerCTA } from "@/components/sections/volunteer-cta";
 import { workAreas } from "@/lib/content";
@@ -17,8 +19,8 @@ export default function WhatWeDoPage() {
         <div className="container">
           <SectionHeading
             eyebrow="What we do"
-            title="Conservation Work That People Can Join"
-            text="Every project is designed to support local wildlife while giving volunteers a clear, satisfying way to help their community."
+            title="Community-Led Environmental Action"
+            text="Every project supports local wildlife while giving people a clear, friendly way to learn, volunteer and care for Midlothian's greenspaces."
             level="h1"
           />
           <div className="mt-12">
@@ -31,19 +33,21 @@ export default function WhatWeDoPage() {
           <div>
             <h2 className="font-heading text-4xl font-bold text-primary-dark">Project Approach</h2>
             <p className="mt-4 leading-8 text-foreground/75">
-              Midlothian Wildflowers works with communities to identify suitable spaces, choose appropriate native
-              planting and care for sites beyond the first flush of colour.
+              Midlothian Wildflowers works with communities and partners to identify suitable spaces, care for sites
+              over time and create opportunities that support local biodiversity.
             </p>
           </div>
           <div>
             <h2 className="font-heading text-4xl font-bold text-primary-dark">Volunteer Projects</h2>
             <p className="mt-4 leading-8 text-foreground/75">
-              Sessions may include preparing ground, sowing seed, planting plugs, recording wildlife and sharing
-              progress so more residents can see what nature recovery looks like locally.
+              Sessions may include woodland care, meadow management, organic growing, seed saving, scything, plant sales
+              and welcoming people at workshops and events.
             </p>
           </div>
         </div>
       </section>
+      <CurrentActivities />
+      <PartnersSection />
       <VolunteerCTA />
     </>
   );

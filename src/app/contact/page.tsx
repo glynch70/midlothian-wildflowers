@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 
 import { ContactForm } from "@/components/sections/contact-form";
+import { DonationsSection } from "@/components/sections/donations-section";
 import { EventbriteSection } from "@/components/sections/eventbrite-section";
+import { FacebookCTA } from "@/components/sections/facebook-cta";
 import { SectionHeading } from "@/components/sections/section-heading";
 
 export const metadata: Metadata = {
@@ -17,7 +19,7 @@ export default function ContactPage() {
           <SectionHeading
             eyebrow="Contact"
             title="Talk to Midlothian Wildflowers"
-            text="Questions about volunteering, events, Facebook updates or potential project sites are welcome."
+            text="Questions about volunteering, donations, events, community scything, growing projects or potential partner sites are welcome."
             level="h1"
           />
           <div className="mt-12">
@@ -26,6 +28,8 @@ export default function ContactPage() {
         </div>
       </section>
       <EventbriteSection />
+      <DonationsSection />
+      <FacebookCTA />
     </>
   );
 }

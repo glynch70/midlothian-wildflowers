@@ -17,7 +17,7 @@ export const siteImages = {
     alt: "A Midlothian Wildflowers volunteer holding handmade habitat boxes and a carved organisation sign",
   },
   volunteer: {
-    src: "/images/volunteers/20250308_135051.jpg",
+    src: "/images/volunteers/male&female.jpg",
     alt: "Two Midlothian Wildflowers volunteers standing with tools during meadow restoration work",
   },
   projects: [

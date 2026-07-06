@@ -12,7 +12,7 @@ export function FacebookCTA() {
           <Facebook className="mb-4 text-primary" aria-hidden="true" />
           <h2 className="font-heading text-4xl font-bold text-primary-dark">Join the Facebook Community</h2>
           <p className="mt-3 max-w-2xl leading-7 text-foreground/75">
-            Follow project updates, event reminders, wildlife sightings and volunteer stories from around Midlothian.
+            Follow us on Facebook for latest events, volunteering dates and updates.
           </p>
         </div>
         <Button asChild size="lg">

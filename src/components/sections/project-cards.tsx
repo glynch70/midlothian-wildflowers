@@ -12,11 +12,11 @@ export function ProjectCards() {
         <FadeIn>
           <SectionHeading
             eyebrow="What we do"
-            title="Practical Projects for Plants, Pollinators and People"
-            text="From meadow creation to habitat restoration, our work is designed to be useful, welcoming and rooted in the local landscape."
+            title="Practical Projects for Greenspaces, Wildlife and People"
+            text="Our work includes stewardship, partnerships, permaculture, meadows, education, conservation volunteering, community scything and organic growing."
           />
         </FadeIn>
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projectCards.map((project) => {
             const Icon = project.icon;
             return (
