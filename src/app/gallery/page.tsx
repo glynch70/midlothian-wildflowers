@@ -19,7 +19,7 @@ export default function GalleryPage() {
           level="h1"
         />
         <div className="mt-12">
-          <Gallery showCategories />
+          <Gallery />
         </div>
       </div>
     </section>

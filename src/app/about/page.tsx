@@ -26,7 +26,7 @@ export default function AboutPage() {
             <p className="mt-6 leading-8 text-foreground/75">
               Midlothian Wildflowers is a constituted grassroots community group with a small board of trustees. The
               group works with local partners and communities across Midlothian to care for the local environment and
-              create community-based opportunities.
+              create community-based opportunities that support health and wellbeing.
             </p>
           </div>
           <div className="relative aspect-[5/4] overflow-hidden rounded-[8px] shadow-soft">
@@ -46,7 +46,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Mission and impact"
             title="Supporting Nature, Health and Wellbeing"
-            text="Midlothian Wildflowers' mission is to care for, create and protect greenspaces in Midlothian whilst supporting the health and wellbeing of the communities we engage with."
+            text="Midlothian Wildflowers’ mission is to care for, create and protect greenspaces in Midlothian whilst supporting the health and wellbeing of the communities we engage with."
           />
           <div className="mt-12">
             <FeatureCards items={missionCards} />
@@ -57,10 +57,13 @@ export default function AboutPage() {
       <section className="section-padding bg-soft-green">
         <div className="container grid gap-8 md:grid-cols-3">
           {[
-            ["Story", "The charity grew from local residents wanting to see more colour, wildlife and care in public spaces."],
+            [
+              "Story",
+              "The group grew from local residents wanting to see more colour, wildlife and care in public spaces.",
+            ],
             [
               "History",
-              "The organisation sprung to life in 2022 to grow a shared passion for the local environment and community wellbeing.",
+              "The organisation began in 2022 to grow a shared passion for the local environment and community wellbeing.",
             ],
             [
               "Future",

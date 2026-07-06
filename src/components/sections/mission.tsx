@@ -11,7 +11,7 @@ export function Mission() {
           <SectionHeading
             eyebrow="Our mission"
             title="Care for, Create and Protect Greenspaces"
-            text="Midlothian Wildflowers' mission is to care for, create and protect greenspaces in Midlothian whilst supporting the health and wellbeing of the communities we engage with."
+            text="Midlothian Wildflowers’ mission is to care for, create and protect greenspaces in Midlothian whilst supporting the health and wellbeing of the communities we engage with."
           />
         </FadeIn>
         <FadeIn className="mt-12">

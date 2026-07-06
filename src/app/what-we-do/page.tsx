@@ -12,6 +12,17 @@ export const metadata: Metadata = {
   description: "Explore Midlothian Wildflowers conservation, education, community and volunteer projects.",
 };
 
+const detailedActivities = [
+  "MWF Grows",
+  "Plant sales",
+  "Seed saving",
+  "Orchard care",
+  "Bracken removal",
+  "Meadow management",
+  "Introducing yellow rattle",
+  "Community scything demos and beginner workshops",
+];
+
 export default function WhatWeDoPage() {
   return (
     <>
@@ -29,7 +40,7 @@ export default function WhatWeDoPage() {
         </div>
       </section>
       <section className="bg-white py-16">
-        <div className="container grid gap-8 md:grid-cols-2">
+        <div className="container grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <h2 className="font-heading text-4xl font-bold text-primary-dark">Project Approach</h2>
             <p className="mt-4 leading-8 text-foreground/75">
@@ -43,6 +54,16 @@ export default function WhatWeDoPage() {
               Sessions may include woodland care, meadow management, organic growing, seed saving, scything, plant sales
               and welcoming people at workshops and events.
             </p>
+          </div>
+          <div className="rounded-[8px] bg-cream p-6 shadow-soft md:p-8">
+            <h2 className="font-heading text-4xl font-bold text-primary-dark">Seasonal Activities</h2>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {detailedActivities.map((activity) => (
+                <p key={activity} className="rounded-[8px] border border-border bg-white px-4 py-3 font-semibold text-primary-dark">
+                  {activity}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </section>

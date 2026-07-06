@@ -1,15 +1,41 @@
+"use client";
+
 import Link from "next/link";
+import type { FormEvent } from "react";
 import { Send } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { contactDetails } from "@/lib/content";
+import { EXTERNAL_LINKS } from "@/lib/links";
 
 export function ContactForm() {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const body = [
+      name ? `Name: ${name}` : "",
+      email ? `Email: ${email}` : "",
+      message ? `Message:\n${message}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n\n");
+    const params = new URLSearchParams({
+      subject: "Midlothian Wildflowers enquiry",
+      body,
+    });
+
+    window.location.href = `mailto:${EXTERNAL_LINKS.email}?${params.toString()}`;
+  }
+
   return (
     <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr]">
-      <form className="grid gap-5 rounded-[8px] bg-white p-6 shadow-soft md:p-8">
+      <form className="grid gap-5 rounded-[8px] bg-white p-6 shadow-soft md:p-8" onSubmit={handleSubmit}>
         <div className="grid gap-2">
           <label htmlFor="name" className="text-sm font-semibold text-primary-dark">
             Name
@@ -30,7 +56,7 @@ export function ContactForm() {
         </div>
         <Button type="submit" size="lg" className="justify-self-start">
           <Send size={18} aria-hidden="true" />
-          Send Message
+          Email Midlothian Wildflowers
         </Button>
       </form>
 

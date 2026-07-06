@@ -16,8 +16,8 @@ export function DonationsSection() {
               Support Local Projects
             </h2>
             <p className="mt-4 max-w-2xl leading-8 text-foreground/75">
-              Donations help Midlothian Wildflowers run local projects such as community meals, plant sales,
-              workshops and learning opportunities.
+              Donations help Midlothian Wildflowers support community meals, plant sales, workshops, learning
+              opportunities and local environmental projects.
             </p>
           </div>
           <Button asChild size="lg">

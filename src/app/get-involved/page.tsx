@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CalendarDays, Facebook, HandHeart, Mail, Users } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { CurrentActivities } from "@/components/sections/current-activities";
@@ -14,6 +15,39 @@ export const metadata: Metadata = {
   title: "Get Involved",
   description: "Volunteer with Midlothian Wildflowers and help restore habitats across Midlothian.",
 };
+
+const getInvolvedActions = [
+  {
+    label: "Volunteer with MWF",
+    href: `mailto:${EXTERNAL_LINKS.email}`,
+    icon: Users,
+  },
+  {
+    label: "View Volunteer Scotland opportunities",
+    href: EXTERNAL_LINKS.volunteerScotland,
+    icon: Users,
+  },
+  {
+    label: "View events on Eventbrite",
+    href: EXTERNAL_LINKS.eventbrite,
+    icon: CalendarDays,
+  },
+  {
+    label: "Follow on Facebook",
+    href: EXTERNAL_LINKS.facebook,
+    icon: Facebook,
+  },
+  {
+    label: "Donate to support local projects",
+    href: EXTERNAL_LINKS.justGiving,
+    icon: HandHeart,
+  },
+  {
+    label: "Email midlothianwildflowers@gmail.com",
+    href: `mailto:${EXTERNAL_LINKS.email}`,
+    icon: Mail,
+  },
+];
 
 export default function GetInvolvedPage() {
   return (
@@ -33,6 +67,30 @@ export default function GetInvolvedPage() {
             <Button asChild size="lg" className="bg-white/10 text-white hover:bg-white/20">
               <Link href={EXTERNAL_LINKS.eventbrite}>Find Upcoming Events</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white py-12">
+        <div className="container">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {getInvolvedActions.map((action) => {
+              const Icon = action.icon;
+
+              return (
+                <Button
+                  key={action.label}
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="h-full justify-start rounded-[8px] text-left whitespace-normal"
+                >
+                  <Link href={action.href}>
+                    <Icon size={18} aria-hidden="true" />
+                    {action.label}
+                  </Link>
+                </Button>
+              );
+            })}
           </div>
         </div>
       </section>
