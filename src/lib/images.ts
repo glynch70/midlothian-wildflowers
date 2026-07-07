@@ -9,7 +9,7 @@ export const siteImages = {
     alt: "Midlothian Wildflowers logo",
   },
   hero: {
-    src: "/images/hero/hero.png",
+    src: "/images/hero.jpeg",
     alt: "A white butterfly feeding on purple thistle flowers with a soft meadow background",
   },
   about: {
