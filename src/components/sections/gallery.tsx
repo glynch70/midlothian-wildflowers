@@ -11,6 +11,8 @@ const galleryImages = siteImages.gallery;
 
 export function Gallery() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const lightboxRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const touchStartX = useRef<number | null>(null);
@@ -27,6 +29,18 @@ export function Gallery() {
 
   const showNext = useCallback(() => {
     setActiveIndex((current) => (current === null ? current : (current + 1) % galleryImages.length));
+  }, []);
+
+  const scrollCarouselTo = useCallback((index: number) => {
+    const container = carouselRef.current;
+    const slide = container?.children[index] as HTMLElement | undefined;
+
+    if (!container || !slide) {
+      return;
+    }
+
+    container.scrollTo({ left: slide.offsetLeft - container.offsetLeft, behavior: "smooth" });
+    setCarouselIndex(index);
   }, []);
 
   useEffect(() => {
@@ -83,30 +97,73 @@ export function Gallery() {
 
   return (
     <>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {galleryImages.map((image, index) => (
-          <button
-            key={image.src}
-            type="button"
-            className="group relative aspect-[4/3] overflow-hidden rounded-[8px] bg-soft-grey shadow-soft focus-ring"
-            aria-label={`Open gallery image ${index + 1} of ${galleryImages.length}`}
-            onClick={() => setActiveIndex(index)}
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-              className="object-cover transition duration-500 group-hover:scale-[1.03] group-hover:opacity-95"
+      <div className="relative">
+        <div
+          ref={carouselRef}
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          onScroll={(event) => {
+            const container = event.currentTarget;
+            const width = container.firstElementChild?.clientWidth ?? 1;
+            const index = Math.round(container.scrollLeft / (width + 16));
+            setCarouselIndex(Math.min(Math.max(index, 0), galleryImages.length - 1));
+          }}
+        >
+          {galleryImages.map((image, index) => (
+            <button
+              key={image.src}
+              type="button"
+              className="group relative aspect-[4/3] min-w-[82%] snap-center overflow-hidden rounded-[18px] bg-soft-grey shadow-[0_18px_44px_rgba(46,60,28,0.2)] focus-ring sm:min-w-[54%] lg:min-w-[34%]"
+              aria-label={`Open gallery image ${index + 1} of ${galleryImages.length}`}
+              onClick={() => setActiveIndex(index)}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(min-width: 1024px) 34vw, (min-width: 640px) 54vw, 82vw"
+                className="object-cover transition duration-500 group-hover:scale-[1.03] group-hover:opacity-95"
+              />
+            </button>
+          ))}
+        </div>
+
+        <Button
+          type="button"
+          size="icon"
+          variant="secondary"
+          className="absolute left-0 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 shadow-soft md:inline-flex"
+          aria-label="Previous gallery image"
+          onClick={() => scrollCarouselTo((carouselIndex - 1 + galleryImages.length) % galleryImages.length)}
+        >
+          <ChevronLeft size={22} aria-hidden="true" />
+        </Button>
+        <Button
+          type="button"
+          size="icon"
+          variant="secondary"
+          className="absolute right-0 top-1/2 hidden translate-x-1/2 -translate-y-1/2 shadow-soft md:inline-flex"
+          aria-label="Next gallery image"
+          onClick={() => scrollCarouselTo((carouselIndex + 1) % galleryImages.length)}
+        >
+          <ChevronRight size={22} aria-hidden="true" />
+        </Button>
+
+        <div className="mt-3 flex justify-center gap-2" aria-hidden="true">
+          {galleryImages.map((image, index) => (
+            <span
+              key={image.src}
+              className={`h-2 rounded-full transition-all ${
+                carouselIndex === index ? "w-6 bg-[#7D4A91]" : "w-2 bg-primary-dark/20"
+              }`}
             />
-          </button>
-        ))}
+          ))}
+        </div>
       </div>
 
       {activeImage ? (
         <div
           ref={lightboxRef}
-          className="fixed inset-0 z-[80] grid place-items-center bg-black/88 p-3 md:p-8"
+          className="fixed inset-0 z-[80] grid place-items-center bg-black/90 p-3 md:p-8"
           role="dialog"
           aria-modal="true"
           aria-label="Gallery image viewer"
@@ -134,7 +191,7 @@ export function Gallery() {
           }}
         >
           <div className="absolute right-4 top-4 z-20 flex items-center gap-3 md:right-6 md:top-6">
-            <p className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white/85">
+            <p className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white/80">
               Image {activeIndex! + 1} of {galleryImages.length}
             </p>
             <Button

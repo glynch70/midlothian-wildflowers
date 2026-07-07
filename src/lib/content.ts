@@ -48,21 +48,21 @@ export const missionCards = [
 
 export const projectCards = [
   {
-    title: "Greenspace Stewardship",
-    text: "Encouraging, adopting and improving greenspaces with support from local people.",
-    icon: Sprout,
-    image: {
-      src: "/images/projects/community-project-work.jpg",
-      alt: "Midlothian Wildflowers volunteers carrying out practical habitat work in a community greenspace",
-    },
-  },
-  {
     title: "Wildflower Meadows",
     text: "Creating and caring for habitats that give native plants and pollinators room to thrive.",
     icon: Flower2,
     image: {
       src: "/images/wildlife/native-wildflower.jpg",
       alt: "Close-up of a native pink wildflower growing in grassland",
+    },
+  },
+  {
+    title: "Greenspace Stewardship",
+    text: "Encouraging, adopting and improving greenspaces with support from local people.",
+    icon: Sprout,
+    image: {
+      src: "/images/projects/community-project-work.jpg",
+      alt: "Midlothian Wildflowers volunteers carrying out practical habitat work in a community greenspace",
     },
   },
   {
@@ -204,13 +204,14 @@ export const currentActivities = [
 ];
 
 export const partners = [
-  "Three Hares Community Woodland",
-  "Midlothian Climate Action",
-  "Midlothian Council",
-  "Growing Families",
-  "Pauline & Colin Macpherson",
-  "Rosewell & District Community Council",
-  "Rosewell Parish Church",
+  { name: "Three Hares Community Woodland", href: EXTERNAL_LINKS.threeHaresWoodland },
+  { name: "Midlothian Climate Action", href: "https://www.midlothianclimateaction.org/" },
+  { name: "Midlothian Council", href: "https://www.midlothian.gov.uk/" },
+  // TODO: Replace placeholders when live partner URLs are confirmed.
+  { name: "Growing Families", href: "#" },
+  { name: "Pauline & Colin Macpherson", href: "#" },
+  { name: "Rosewell & District Community Council", href: "#" },
+  { name: "Rosewell Parish Church", href: "#" },
 ];
 
 export const trustItems = [

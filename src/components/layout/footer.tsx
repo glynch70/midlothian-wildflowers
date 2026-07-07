@@ -6,10 +6,10 @@ import { navItems } from "@/lib/content";
 
 export function Footer() {
   return (
-    <footer className="bg-primary-dark text-white">
-      <div className="container grid gap-10 py-12 md:grid-cols-[1.2fr_1fr_1fr]">
+    <footer className="overflow-hidden bg-gradient-to-br from-[#27421B] via-primary-dark to-[#14270E] text-white">
+      <div className="container grid gap-10 py-14 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
-          <h2 className="font-heading text-3xl font-bold">Midlothian Wildflowers</h2>
+          <h2 className="font-heading text-4xl font-bold leading-none">Midlothian Wildflowers</h2>
           <p className="mt-4 max-w-sm text-sm leading-6 text-white/80">
             A constituted grassroots community group caring for greenspaces, wildlife and community wellbeing across
             Midlothian.
@@ -36,20 +36,21 @@ export function Footer() {
             <Link
               href={`mailto:${EXTERNAL_LINKS.email}`}
               aria-label="Email Midlothian Wildflowers"
-              className="rounded-full bg-white/10 p-3 text-white hover:bg-white/20 focus-ring"
+              className="rounded-full bg-white/10 p-3 text-white shadow-sm hover:bg-white/20 focus-ring"
             >
               <Mail size={18} aria-hidden="true" />
             </Link>
             <Link
               href={EXTERNAL_LINKS.facebook}
               aria-label="Visit Midlothian Wildflowers on Facebook"
-              className="rounded-full bg-white/10 p-3 text-white hover:bg-white/20 focus-ring"
+              className="rounded-full bg-white/10 p-3 text-white shadow-sm hover:bg-white/20 focus-ring"
             >
               <Facebook size={18} aria-hidden="true" />
             </Link>
           </div>
         </div>
       </div>
+      <div className="wildflower-divider opacity-30" aria-hidden="true" />
       <div className="border-t border-white/10">
         <div className="container flex flex-col gap-2 py-5 text-sm text-white/70 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Midlothian Wildflowers. All rights reserved.</p>

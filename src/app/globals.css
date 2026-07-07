@@ -21,7 +21,9 @@ html {
 }
 
 body {
-  background: #f8f6f0;
+  background:
+    radial-gradient(circle at top left, rgba(252, 204, 52, 0.12), transparent 28rem),
+    linear-gradient(180deg, #fffdf6 0%, #f8f6f0 42%, #eef5e7 100%);
   color: #243119;
 }
 
@@ -35,10 +37,55 @@ a {
 
 @layer utilities {
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-14 md:py-24;
   }
 
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-cream;
+  }
+
+  .yellow-divider {
+    @apply mx-auto mt-3 h-0.5 w-12 rounded-full bg-[#F6C62F];
+  }
+
+  .soft-panel {
+    @apply rounded-[24px] border border-white/70 bg-white/90 shadow-[0_18px_50px_rgba(46,60,28,0.12)] backdrop-blur;
+  }
+
+  .wildflower-divider {
+    position: relative;
+    min-height: 72px;
+    overflow: hidden;
+  }
+
+  .wildflower-divider::before {
+    content: "";
+    position: absolute;
+    inset: auto -5% 0;
+    height: 72px;
+    background:
+      radial-gradient(circle at 8% 38%, #f6c62f 0 3px, transparent 3.5px),
+      radial-gradient(circle at 17% 20%, #7d4a91 0 3px, transparent 3.5px),
+      radial-gradient(circle at 27% 42%, #f6c62f 0 3px, transparent 3.5px),
+      radial-gradient(circle at 43% 24%, #8e5aa6 0 3px, transparent 3.5px),
+      radial-gradient(circle at 61% 42%, #f6c62f 0 3px, transparent 3.5px),
+      radial-gradient(circle at 76% 22%, #7d4a91 0 3px, transparent 3.5px),
+      radial-gradient(circle at 91% 38%, #f6c62f 0 3px, transparent 3.5px),
+      repeating-linear-gradient(82deg, transparent 0 20px, rgba(68, 108, 44, 0.5) 21px 23px, transparent 24px 38px);
+    opacity: 0.75;
+    mask-image: linear-gradient(to top, #000 35%, transparent 100%);
+  }
+
+  .wildflower-silhouette {
+    background:
+      radial-gradient(circle at 8% 38%, #f6c62f 0 3px, transparent 3.5px),
+      radial-gradient(circle at 17% 20%, #7d4a91 0 3px, transparent 3.5px),
+      radial-gradient(circle at 27% 42%, #f6c62f 0 3px, transparent 3.5px),
+      radial-gradient(circle at 43% 24%, #8e5aa6 0 3px, transparent 3.5px),
+      radial-gradient(circle at 61% 42%, #f6c62f 0 3px, transparent 3.5px),
+      radial-gradient(circle at 76% 22%, #7d4a91 0 3px, transparent 3.5px),
+      radial-gradient(circle at 91% 38%, #f6c62f 0 3px, transparent 3.5px),
+      repeating-linear-gradient(82deg, transparent 0 20px, rgba(255, 255, 255, 0.45) 21px 23px, transparent 24px 38px);
+    mask-image: linear-gradient(to top, #000 35%, transparent 100%);
   }
 }

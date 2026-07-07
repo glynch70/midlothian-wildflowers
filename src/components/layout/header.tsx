@@ -16,18 +16,20 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-primary/10 bg-cream/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-primary/10 bg-white/95 shadow-[0_8px_30px_rgba(46,60,28,0.08)] backdrop-blur">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-full" onClick={() => setOpen(false)}>
           <Image
             src={siteImages.logo.src}
             alt=""
-            width={44}
-            height={44}
-            className="h-11 w-11 rounded-full object-cover"
+            width={52}
+            height={52}
+            className="h-12 w-12 rounded-full object-cover"
             priority
           />
-          <span className="font-heading text-xl font-bold text-primary-dark sm:text-2xl">Midlothian Wildflowers</span>
+          <span className="font-heading text-xl font-bold leading-none text-[#7D4A91] sm:text-2xl">
+            Midlothian <span className="block">Wildflowers</span>
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
@@ -54,7 +56,7 @@ export function Header() {
         <Button
           variant="ghost"
           size="icon"
-          className="lg:hidden"
+          className="h-12 w-12 text-primary-dark lg:hidden"
           aria-label={open ? "Close navigation" : "Open navigation"}
           aria-expanded={open}
           onClick={() => setOpen((value) => !value)}
@@ -64,7 +66,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-primary/10 bg-cream lg:hidden">
+        <div className="border-t border-primary/10 bg-white lg:hidden">
           <nav className="container grid gap-2 py-4" aria-label="Mobile navigation">
             {navItems.map((item) => (
               <Link

@@ -56,7 +56,7 @@ export default function GetInvolvedPage() {
         <div className="container max-w-4xl text-center">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-white/70">Volunteer with us</p>
           <h1 className="font-heading text-5xl font-bold leading-tight md:text-6xl">Make Space for Wildflowers</h1>
-          <p className="mt-6 text-lg leading-8 text-white/82">
+          <p className="mt-6 text-lg leading-8 text-white/80">
             Volunteer, attend events, donate or follow along on Facebook to support community-led conservation across
             Midlothian.
           </p>
