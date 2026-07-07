@@ -38,8 +38,8 @@ export function Header() {
               key={item.href}
               href={item.href}
               className={cn(
-                "rounded-full px-1 py-2 text-sm font-semibold text-primary-dark/80 transition hover:text-primary-dark focus-ring",
-                pathname === item.href && "text-primary-dark",
+                "relative rounded-full px-1 py-2 text-sm font-semibold text-primary-dark/80 transition hover:text-primary-dark focus-ring after:absolute after:inset-x-1 after:-bottom-1 after:h-0.5 after:rounded-full after:bg-transparent after:transition",
+                pathname === item.href && "text-primary-dark after:bg-[#F6C62F]",
               )}
             >
               {item.label}
