@@ -9,7 +9,7 @@ export function GallerySection() {
         <FadeIn className="text-center">
           <SectionHeading
             eyebrow="Gallery"
-            title="A Growing Patchwork of Local Action"
+            title="Creative grassroots projects across Midlothian"
             text="Real project moments, wildlife sightings and volunteer days from the Midlothian Wildflowers community."
           />
           <div className="yellow-divider" />

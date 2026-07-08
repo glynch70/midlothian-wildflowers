@@ -13,7 +13,7 @@ export function CurrentActivities() {
         <FadeIn>
           <SectionHeading
             eyebrow="Current activities"
-            title="Regular Ways to Learn, Grow and Volunteer"
+            title="Learning, growing and caring together"
             text="From monthly conservation sessions to organic growing and community scything, there are practical ways to get involved throughout the year."
           />
         </FadeIn>
@@ -23,8 +23,8 @@ export function CurrentActivities() {
 
             return (
               <FadeIn key={activity.title}>
-                <Card className="flex h-full flex-col p-7">
-                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-soft-green text-primary">
+                <Card className="flex h-full flex-col rounded-[22px] border-white/90 bg-white/95 p-7 shadow-[0_12px_32px_rgba(46,60,28,0.1)]">
+                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-sky-soft text-sky-deep">
                     <Icon aria-hidden="true" />
                   </div>
                   <h3 className="font-heading text-2xl font-bold text-primary-dark">{activity.title}</h3>

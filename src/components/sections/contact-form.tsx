@@ -35,7 +35,7 @@ export function ContactForm() {
 
   return (
     <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr]">
-      <form className="grid gap-5 rounded-[8px] bg-white p-6 shadow-soft md:p-8" onSubmit={handleSubmit}>
+      <form className="grid gap-5 rounded-[22px] bg-white p-6 shadow-[0_16px_42px_rgba(46,60,28,0.1)] md:p-8" onSubmit={handleSubmit}>
         <div className="grid gap-2">
           <label htmlFor="name" className="text-sm font-semibold text-primary-dark">
             Name
@@ -60,7 +60,7 @@ export function ContactForm() {
         </Button>
       </form>
 
-      <aside className="rounded-[8px] bg-primary-dark p-8 text-white shadow-soft">
+      <aside className="rounded-[22px] bg-gradient-to-br from-primary-dark to-sky-deep p-8 text-white shadow-[0_16px_42px_rgba(46,60,28,0.12)]">
         <h2 className="font-heading text-4xl font-bold">Contact</h2>
         <p className="mt-4 leading-8 text-white/80">
           Have a question about volunteering, events or a possible wildflower project? Send a message or connect through

@@ -30,7 +30,7 @@ export default function WhatWeDoPage() {
         <div className="container">
           <SectionHeading
             eyebrow="What we do"
-            title="Community-Led Environmental Action"
+            title="Practical projects with local roots"
             text="Every project supports local wildlife while giving people a clear, friendly way to learn, volunteer and care for Midlothian's greenspaces."
             level="h1"
           />
@@ -42,24 +42,24 @@ export default function WhatWeDoPage() {
       <section className="bg-white py-16">
         <div className="container grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <h2 className="font-heading text-4xl font-bold text-primary-dark">Project Approach</h2>
+            <h2 className="font-heading text-4xl font-bold text-primary-dark">Creative grassroots projects</h2>
             <p className="mt-4 leading-8 text-foreground/75">
               Midlothian Wildflowers works with communities and partners to identify suitable spaces, care for sites
               over time and create opportunities that support local biodiversity.
             </p>
           </div>
           <div>
-            <h2 className="font-heading text-4xl font-bold text-primary-dark">Volunteer Projects</h2>
+            <h2 className="font-heading text-4xl font-bold text-primary-dark">Practical days outdoors</h2>
             <p className="mt-4 leading-8 text-foreground/75">
               Sessions may include woodland care, meadow management, organic growing, seed saving, scything, plant sales
               and welcoming people at workshops and events.
             </p>
           </div>
-          <div className="rounded-[8px] bg-cream p-6 shadow-soft md:p-8">
-            <h2 className="font-heading text-4xl font-bold text-primary-dark">Seasonal Activities</h2>
+          <div className="rounded-[24px] bg-cream p-6 shadow-[0_16px_42px_rgba(46,60,28,0.1)] md:p-8">
+            <h2 className="font-heading text-4xl font-bold text-primary-dark">Seasonal things to learn</h2>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {detailedActivities.map((activity) => (
-                <p key={activity} className="rounded-[8px] border border-border bg-white px-4 py-3 font-semibold text-primary-dark">
+                <p key={activity} className="rounded-[16px] border border-border bg-white px-4 py-3 font-semibold text-primary-dark">
                   {activity}
                 </p>
               ))}

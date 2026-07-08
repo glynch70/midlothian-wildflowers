@@ -7,7 +7,7 @@ import { siteImages } from "@/lib/images";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[74vh] overflow-hidden bg-primary-dark text-white md:min-h-[82vh]">
+    <section className="relative min-h-[76vh] overflow-hidden bg-primary-dark text-white md:min-h-[82vh]">
       <Image
         src={siteImages.hero.src}
         alt={siteImages.hero.alt}
@@ -16,27 +16,28 @@ export function Hero() {
         sizes="100vw"
         className="object-cover object-[62%_center] md:object-[76%_center] lg:object-right"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#172410]/95 via-[#172410]/50 to-[#172410]/5" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#172410]/40 via-transparent to-transparent" />
-      <div className="container relative flex min-h-[74vh] items-center py-16 md:min-h-[82vh]">
-        <div className="max-w-[540px]">
-          <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-white/80">COMMUNITY CONSERVATION</p>
-          <h1 className="font-heading text-4xl font-bold leading-[0.94] drop-shadow sm:text-5xl md:text-7xl lg:text-8xl">
-            Restoring nature
-            <span className="block">together in</span>
-            <span className="block font-sans text-5xl font-black italic leading-[0.88] text-[#F6C62F] sm:text-6xl md:text-8xl lg:text-9xl">
-              Midlothian
-            </span>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#172410]/92 via-[#355322]/48 to-[#F6C62F]/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#172410]/32 via-transparent to-transparent" />
+      <div className="container relative flex min-h-[76vh] items-center py-14 md:min-h-[82vh]">
+        <div className="max-w-[680px]">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-sunshine md:text-sm">
+            COMMUNITY • NATURE • LEARNING
+          </p>
+          <h1 className="font-heading text-4xl font-bold leading-[0.98] drop-shadow sm:text-5xl md:text-6xl lg:text-7xl">
+            Bringing people together across Midlothian to protect green spaces and each other
           </h1>
           <p className="mt-5 max-w-xl text-base font-medium leading-8 text-white/90 md:text-xl">
-            Connecting people, places and wildlife through practical action, learning and local care.
+            Creative grassroots projects, practical conservation and outdoor learning for people, places and wildlife.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" className="bg-[#F6C62F] text-primary-dark hover:bg-[#f8d85e]">
-              <Link href="/about">
-                Our Mission
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Button asChild size="lg" className="bg-sunshine text-primary-dark hover:bg-[#f8d85e]">
+              <Link href="/what-we-do">
+                Explore Our Projects
                 <ArrowRight size={18} aria-hidden="true" />
               </Link>
+            </Button>
+            <Button asChild size="lg" className="bg-white/90 text-primary-dark hover:bg-sky-soft">
+              <Link href="/get-involved">Volunteer With Us</Link>
             </Button>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { projectCards } from "@/lib/content";
@@ -13,15 +14,19 @@ export function ProjectCards() {
         <FadeIn className="text-center">
           <SectionHeading
             eyebrow="What we do"
-            title="Practical Projects for Greenspaces, Wildlife and People"
-            text="Our work includes stewardship, partnerships, permaculture, meadows, education, conservation volunteering, community scything and organic growing."
+            title="Practical projects with local roots"
+            text="Friendly, hands-on work that helps people learn outdoors while caring for Midlothian's green spaces."
           />
           <div className="yellow-divider" />
         </FadeIn>
-        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projectCards.map((project, index) => {
             const Icon = project.icon;
-            const arrowColours = ["bg-[#F6C62F] text-primary-dark", "bg-primary text-white", "bg-[#7D4A91] text-white"];
+            const accentColours = [
+              "bg-sunshine text-primary-dark",
+              "bg-sky-soft text-sky-deep",
+              "bg-soft-green text-primary-dark",
+            ];
             const objectPosition =
               project.title === "Organic Growing"
                 ? "object-[50%_24%]"
@@ -31,8 +36,8 @@ export function ProjectCards() {
 
             return (
               <FadeIn key={project.title}>
-                <Card className="group grid h-full grid-cols-[42%_1fr] overflow-hidden rounded-[14px] border-white/80 bg-white shadow-[0_12px_34px_rgba(46,60,28,0.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_44px_rgba(46,60,28,0.16)] md:block">
-                  <div className="relative min-h-36 bg-soft-grey md:aspect-[4/3]">
+                <Card className="group flex h-full flex-col overflow-hidden rounded-[22px] border-white/90 bg-white shadow-[0_12px_32px_rgba(46,60,28,0.1)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_38px_rgba(46,60,28,0.14)]">
+                  <div className="relative aspect-[4/3] bg-soft-grey">
                     <Image
                       src={project.image.src}
                       alt={project.image.alt}
@@ -41,18 +46,25 @@ export function ProjectCards() {
                       className={`object-cover ${objectPosition} transition duration-500 group-hover:scale-[1.04]`}
                     />
                   </div>
-                  <div className="relative p-5 md:p-6">
-                    <Icon className="mb-3 h-5 w-5 text-primary md:mb-5 md:h-6 md:w-6" aria-hidden="true" />
+                  <div className="flex flex-1 flex-col p-5 md:p-6">
+                    <span
+                      className={`mb-4 flex h-11 w-11 items-center justify-center rounded-full ${accentColours[index % accentColours.length]}`}
+                    >
+                      <Icon className="h-5 w-5" aria-hidden="true" />
+                    </span>
                     <h3 className="font-heading text-xl font-bold leading-tight text-primary-dark md:text-2xl">
                       {project.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-6 text-foreground/72 md:leading-7">{project.text}</p>
-                    <span
-                      className={`absolute bottom-4 right-4 flex h-9 w-9 items-center justify-center rounded-full shadow-md ${arrowColours[index % arrowColours.length]}`}
-                      aria-hidden="true"
+                    <p className="mt-2 flex-1 text-sm leading-6 text-foreground/72 md:leading-7">{project.text}</p>
+                    <Link
+                      href="/what-we-do"
+                      className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-sky-deep hover:text-primary-dark focus-ring"
                     >
-                      <ArrowRight size={17} />
-                    </span>
+                      Learn more
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sunshine text-primary-dark">
+                        <ArrowRight size={15} aria-hidden="true" />
+                      </span>
+                    </Link>
                   </div>
                 </Card>
               </FadeIn>

@@ -112,7 +112,7 @@ export function Gallery() {
             <button
               key={image.src}
               type="button"
-              className="group relative aspect-[4/3] min-w-[82%] snap-center overflow-hidden rounded-[18px] bg-soft-grey shadow-[0_18px_44px_rgba(46,60,28,0.2)] focus-ring sm:min-w-[54%] lg:min-w-[34%]"
+              className="group relative aspect-[4/3] min-w-[82%] snap-center overflow-hidden rounded-[22px] bg-sky-soft shadow-[0_18px_44px_rgba(46,60,28,0.14)] focus-ring sm:min-w-[54%] lg:min-w-[34%]"
               aria-label={`Open gallery image ${index + 1} of ${galleryImages.length}`}
               onClick={() => setActiveIndex(index)}
             >
@@ -153,7 +153,7 @@ export function Gallery() {
             <span
               key={image.src}
               className={`h-2 rounded-full transition-all ${
-                carouselIndex === index ? "w-6 bg-[#7D4A91]" : "w-2 bg-primary-dark/20"
+                carouselIndex === index ? "w-6 bg-sunshine" : "w-2 bg-sky-deep/25"
               }`}
             />
           ))}

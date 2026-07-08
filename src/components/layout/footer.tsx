@@ -6,7 +6,7 @@ import { navItems } from "@/lib/content";
 
 export function Footer() {
   return (
-    <footer className="overflow-hidden bg-gradient-to-br from-[#27421B] via-primary-dark to-[#14270E] text-white">
+    <footer className="overflow-hidden bg-gradient-to-br from-primary-dark via-[#426F2E] to-sky-deep text-white">
       <div className="container grid gap-10 py-14 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
           <h2 className="font-heading text-4xl font-bold leading-none">Midlothian Wildflowers</h2>

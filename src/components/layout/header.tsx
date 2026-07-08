@@ -17,29 +17,29 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-primary/10 bg-white/95 shadow-[0_8px_30px_rgba(46,60,28,0.08)] backdrop-blur">
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container flex h-24 items-center justify-between gap-5 lg:h-28">
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-full" onClick={() => setOpen(false)}>
           <Image
             src={siteImages.logo.src}
             alt=""
-            width={52}
-            height={52}
-            className="h-12 w-12 rounded-full object-cover"
+            width={72}
+            height={72}
+            className="h-16 w-16 rounded-full object-cover lg:h-20 lg:w-20"
             priority
           />
-          <span className="font-heading text-xl font-bold leading-none text-[#7D4A91] sm:text-2xl">
+          <span className="font-heading text-2xl font-bold leading-none text-primary-dark sm:text-3xl lg:text-4xl">
             Midlothian <span className="block">Wildflowers</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
+        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Main navigation">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
                 "relative rounded-full px-1 py-2 text-sm font-semibold text-primary-dark/80 transition hover:text-primary-dark focus-ring after:absolute after:inset-x-1 after:-bottom-1 after:h-0.5 after:rounded-full after:bg-transparent after:transition",
-                pathname === item.href && "text-primary-dark after:bg-[#F6C62F]",
+                pathname === item.href && "text-primary-dark after:bg-sunshine",
               )}
             >
               {item.label}
@@ -78,7 +78,7 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Button asChild className="mt-2">
+            <Button asChild className="mt-2 bg-sunshine text-primary-dark hover:bg-[#f8d85e]">
               <Link href="/get-involved" onClick={() => setOpen(false)}>
                 Volunteer With Us
               </Link>

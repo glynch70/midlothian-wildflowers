@@ -28,6 +28,12 @@ const config: Config = {
           foreground: "#ffffff",
           dark: "#355322",
         },
+        sunshine: "#F6C62F",
+        sky: {
+          DEFAULT: "#BFE4F5",
+          soft: "#EAF7FC",
+          deep: "#2F6F86",
+        },
         cream: "#F8F6F0",
         soft: {
           grey: "#EEF0EA",

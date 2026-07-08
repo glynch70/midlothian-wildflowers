@@ -14,7 +14,7 @@ export default function GalleryPage() {
       <div className="container">
         <SectionHeading
           eyebrow="Gallery"
-          title="Projects, Wildlife, Events, Volunteers and Habitats"
+          title="Creative grassroots projects across Midlothian"
           text="Browse real photographs from Midlothian Wildflowers projects, wildlife observations and community activity."
           level="h1"
         />

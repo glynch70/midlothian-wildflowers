@@ -9,7 +9,7 @@ export function TrustSection() {
             const Icon = item.icon;
 
             return (
-              <div key={item.title} className="flex items-center gap-3 rounded-[8px] bg-white p-5 shadow-soft">
+              <div key={item.title} className="flex items-center gap-3 rounded-[18px] bg-white p-5 shadow-[0_12px_30px_rgba(46,60,28,0.1)]">
                 <Icon className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
                 <p className="font-semibold text-primary-dark">{item.title}</p>
               </div>

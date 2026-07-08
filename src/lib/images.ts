@@ -10,7 +10,7 @@ export const siteImages = {
   },
   hero: {
     src: "/images/hero.jpeg",
-    alt: "A white butterfly feeding on purple thistle flowers with a soft meadow background",
+    alt: "A white butterfly feeding on thistle flowers with a soft meadow background",
   },
   about: {
     src: "/images/projects/community-project-work.jpg",

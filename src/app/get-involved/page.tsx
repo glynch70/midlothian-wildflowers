@@ -52,19 +52,19 @@ const getInvolvedActions = [
 export default function GetInvolvedPage() {
   return (
     <>
-      <section className="section-padding bg-primary-dark text-white">
+      <section className="section-padding bg-gradient-to-br from-sky-soft via-cream to-[#FFF4C8] text-primary-dark">
         <div className="container max-w-4xl text-center">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-white/70">Volunteer with us</p>
-          <h1 className="font-heading text-5xl font-bold leading-tight md:text-6xl">Make Space for Wildflowers</h1>
-          <p className="mt-6 text-lg leading-8 text-white/80">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-deep">Get involved</p>
+          <h1 className="font-heading text-5xl font-bold leading-tight md:text-6xl">Get involved in local action</h1>
+          <p className="mt-6 text-lg leading-8 text-primary-dark/78">
             Volunteer, attend events, donate or follow along on Facebook to support community-led conservation across
             Midlothian.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <Button asChild size="lg" variant="secondary">
+            <Button asChild size="lg">
               <Link href={EXTERNAL_LINKS.volunteerScotland}>Volunteer Scotland Opportunities</Link>
             </Button>
-            <Button asChild size="lg" className="bg-white/10 text-white hover:bg-white/20">
+            <Button asChild size="lg" className="bg-sunshine text-primary-dark hover:bg-[#f8d85e]">
               <Link href={EXTERNAL_LINKS.eventbrite}>Find Upcoming Events</Link>
             </Button>
           </div>
@@ -82,7 +82,7 @@ export default function GetInvolvedPage() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="h-full justify-start rounded-[8px] text-left whitespace-normal"
+                  className="h-full justify-start rounded-[18px] text-left whitespace-normal"
                 >
                   <Link href={action.href}>
                     <Icon size={18} aria-hidden="true" />
@@ -98,10 +98,10 @@ export default function GetInvolvedPage() {
       <CurrentActivities />
       <section className="section-padding bg-white">
         <div className="container">
-          <h2 className="font-heading text-4xl font-bold text-primary-dark">Volunteer Opportunities</h2>
+          <h2 className="font-heading text-4xl font-bold text-primary-dark">Friendly ways to help outdoors</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {volunteerRoles.map((role) => (
-              <div key={role} className="rounded-[8px] border border-border bg-cream p-6">
+              <div key={role} className="rounded-[20px] border border-border bg-cream p-6 shadow-[0_12px_30px_rgba(46,60,28,0.08)]">
                 <h3 className="font-heading text-2xl font-bold text-primary-dark">{role}</h3>
                 <p className="mt-3 leading-7 text-foreground/72">
                   A practical way to support local habitats, learn with others and contribute at a pace that suits you.

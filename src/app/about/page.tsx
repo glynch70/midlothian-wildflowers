@@ -19,9 +19,9 @@ export default function AboutPage() {
       <section className="section-padding bg-cream">
         <div className="container grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-primary">About us</p>
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-deep">About us</p>
             <h1 className="font-heading text-5xl font-bold leading-tight text-primary-dark md:text-6xl">
-              A Grassroots Group Caring for Midlothian Greenspaces
+              A grassroots group caring for Midlothian greenspaces
             </h1>
             <p className="mt-6 leading-8 text-foreground/75">
               Midlothian Wildflowers is a constituted grassroots community group with a small board of trustees. The
@@ -29,7 +29,7 @@ export default function AboutPage() {
               create community-based opportunities that support health and wellbeing.
             </p>
           </div>
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[8px] shadow-soft">
+          <div className="relative aspect-[5/4] overflow-hidden rounded-[24px] shadow-[0_16px_42px_rgba(46,60,28,0.12)]">
             <Image
               src={siteImages.about.src}
               alt={siteImages.about.alt}
@@ -45,7 +45,7 @@ export default function AboutPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Mission and impact"
-            title="Supporting Nature, Health and Wellbeing"
+            title="Growing community through nature"
             text="Midlothian Wildflowers’ mission is to care for, create and protect greenspaces in Midlothian whilst supporting the health and wellbeing of the communities we engage with."
           />
           <div className="mt-12">
