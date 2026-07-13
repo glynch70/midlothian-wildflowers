@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Award, HeartHandshake, Sparkles } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { siteImages } from "@/lib/images";
 
 export function AwardsSection() {
   return (
@@ -52,6 +54,15 @@ export function AwardsSection() {
           </div>
 
           <aside className="rounded-[24px] border border-white/80 bg-white/85 p-6 shadow-[0_16px_38px_rgba(46,60,28,0.1)] md:p-8">
+            <div className="relative mb-6 aspect-square overflow-hidden rounded-[20px] bg-primary-dark shadow-[0_16px_34px_rgba(46,60,28,0.18)]">
+              <Image
+                src={siteImages.awards.src}
+                alt={siteImages.awards.alt}
+                fill
+                sizes="(min-width: 1024px) 36vw, 100vw"
+                className="object-cover"
+              />
+            </div>
             <Sparkles className="mb-5 text-sunshine" size={34} aria-hidden="true" />
             <blockquote className="font-heading text-3xl font-bold leading-tight text-primary-dark md:text-4xl">
               “Midlothian Wildflowers is growing from the small acorn we planted into a strong and thriving woodland,

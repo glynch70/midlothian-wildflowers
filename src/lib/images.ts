@@ -12,6 +12,10 @@ export const siteImages = {
     src: "/images/hero.jpeg",
     alt: "A white butterfly feeding on thistle flowers with a soft meadow background",
   },
+  awards: {
+    src: "/images/awards/bbc-environmental-award-finalist.jpg",
+    alt: "BBC Make a Difference Awards finalist graphic for the environmental award",
+  },
   about: {
     src: "/images/projects/community-project-work.jpg",
     alt: "Midlothian Wildflowers volunteers working together on a community greenspace project",
