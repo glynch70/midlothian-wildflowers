@@ -3,7 +3,12 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { EXTERNAL_LINKS } from "@/lib/links";
 import "./globals.css";
+
+const siteUrl = "https://www.midlothianwildflowers-co.uk";
+const siteDescription =
+  "Sunny, grassroots conservation projects, outdoor learning and community action for people, places and wildlife across Midlothian.";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,25 +24,57 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Midlothian Wildflowers",
     template: "%s | Midlothian Wildflowers",
   },
-  description:
-    "Community-led conservation, wildflower planting and habitat restoration across Midlothian, Scotland.",
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Midlothian Wildflowers",
-    description:
-      "Volunteer-led environmental projects supporting biodiversity, community wellbeing and conservation across Midlothian.",
+    description: siteDescription,
+    url: "/",
+    siteName: "Midlothian Wildflowers",
     type: "website",
     locale: "en_GB",
+    images: [
+      {
+        url: "/images/hero.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "White butterfly on thistle flowers for Midlothian Wildflowers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Midlothian Wildflowers",
+    description: siteDescription,
+    images: ["/images/hero.jpeg"],
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    name: "Midlothian Wildflowers",
+    url: siteUrl,
+    areaServed: "Midlothian, Scotland",
+    description: siteDescription,
+    email: EXTERNAL_LINKS.email,
+  };
+
   return (
     <html lang="en-GB">
       <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />

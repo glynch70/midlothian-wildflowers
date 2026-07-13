@@ -6,11 +6,13 @@ import { PartnersSection } from "@/components/sections/partners-section";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { VolunteerCTA } from "@/components/sections/volunteer-cta";
 import { workAreas } from "@/lib/content";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "What We Do",
   description: "Explore Midlothian Wildflowers conservation, education, community and volunteer projects.",
-};
+  path: "/what-we-do",
+});
 
 const detailedActivities = [
   "MWF Grows",
@@ -59,7 +61,10 @@ export default function WhatWeDoPage() {
             <h2 className="font-heading text-4xl font-bold text-primary-dark">Seasonal things to learn</h2>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {detailedActivities.map((activity) => (
-                <p key={activity} className="rounded-[16px] border border-border bg-white px-4 py-3 font-semibold text-primary-dark">
+                <p
+                  key={activity}
+                  className="rounded-[16px] border border-border bg-white px-4 py-3 font-semibold text-primary-dark"
+                >
                   {activity}
                 </p>
               ))}

@@ -54,7 +54,17 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container flex flex-col gap-2 py-5 text-sm text-white/70 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Midlothian Wildflowers. All rights reserved.</p>
-          <p>Website by Bear Media</p>
+          <p>
+            Website designed & developed by{" "}
+            <Link
+              href="https://bear-media.com/services#website-design"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white underline-offset-4 hover:underline"
+            >
+              Bear Media
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

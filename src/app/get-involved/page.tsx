@@ -10,11 +10,13 @@ import { TrustSection } from "@/components/sections/trust-section";
 import { VolunteerCTA } from "@/components/sections/volunteer-cta";
 import { volunteerRoles } from "@/lib/content";
 import { EXTERNAL_LINKS } from "@/lib/links";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Get Involved",
   description: "Volunteer with Midlothian Wildflowers and help restore habitats across Midlothian.",
-};
+  path: "/get-involved",
+});
 
 const getInvolvedActions = [
   {
@@ -55,7 +57,9 @@ export default function GetInvolvedPage() {
       <section className="section-padding bg-gradient-to-br from-sky-soft via-cream to-[#FFF4C8] text-primary-dark">
         <div className="container max-w-4xl text-center">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-deep">Get involved</p>
-          <h1 className="font-heading text-5xl font-bold leading-tight md:text-6xl">Get involved in local action</h1>
+          <h1 className="font-heading text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+            Get involved in local action
+          </h1>
           <p className="mt-6 text-lg leading-8 text-primary-dark/78">
             Volunteer, attend events, donate or follow along on Facebook to support community-led conservation across
             Midlothian.
@@ -101,7 +105,10 @@ export default function GetInvolvedPage() {
           <h2 className="font-heading text-4xl font-bold text-primary-dark">Friendly ways to help outdoors</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {volunteerRoles.map((role) => (
-              <div key={role} className="rounded-[20px] border border-border bg-cream p-6 shadow-[0_12px_30px_rgba(46,60,28,0.08)]">
+              <div
+                key={role}
+                className="rounded-[20px] border border-border bg-cream p-6 shadow-[0_12px_30px_rgba(46,60,28,0.08)]"
+              >
                 <h3 className="font-heading text-2xl font-bold text-primary-dark">{role}</h3>
                 <p className="mt-3 leading-7 text-foreground/72">
                   A practical way to support local habitats, learn with others and contribute at a pace that suits you.

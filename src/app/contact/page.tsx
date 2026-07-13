@@ -5,11 +5,13 @@ import { DonationsSection } from "@/components/sections/donations-section";
 import { EventbriteSection } from "@/components/sections/eventbrite-section";
 import { FacebookCTA } from "@/components/sections/facebook-cta";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Contact",
   description: "Contact Midlothian Wildflowers about volunteering, events and community conservation.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

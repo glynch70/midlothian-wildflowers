@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 
 import { Gallery } from "@/components/sections/gallery";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Gallery",
   description: "Browse Midlothian Wildflowers project, wildlife, event, volunteer and habitat images.",
-};
+  path: "/gallery",
+});
 
 export default function GalleryPage() {
   return (

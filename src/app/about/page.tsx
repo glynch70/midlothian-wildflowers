@@ -7,11 +7,13 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { TrustSection } from "@/components/sections/trust-section";
 import { missionCards } from "@/lib/content";
 import { siteImages } from "@/lib/images";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "About",
   description: "Learn about Midlothian Wildflowers, our mission, community impact and conservation story.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -20,7 +22,7 @@ export default function AboutPage() {
         <div className="container grid items-center gap-10 lg:grid-cols-2">
           <div>
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-deep">About us</p>
-            <h1 className="font-heading text-5xl font-bold leading-tight text-primary-dark md:text-6xl">
+            <h1 className="font-heading text-4xl font-bold leading-tight text-primary-dark sm:text-5xl md:text-6xl">
               A grassroots group caring for Midlothian greenspaces
             </h1>
             <p className="mt-6 leading-8 text-foreground/75">

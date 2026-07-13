@@ -17,17 +17,17 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-primary/10 bg-white/95 shadow-[0_8px_30px_rgba(46,60,28,0.08)] backdrop-blur">
-      <div className="container flex h-24 items-center justify-between gap-5 lg:h-28">
+      <div className="container flex h-20 items-center justify-between gap-4 sm:h-24 lg:h-28">
         <Link href="/" className="focus-ring flex items-center gap-3 rounded-full" onClick={() => setOpen(false)}>
           <Image
             src={siteImages.logo.src}
             alt=""
             width={72}
             height={72}
-            className="h-16 w-16 rounded-full object-cover lg:h-20 lg:w-20"
+            className="h-14 w-14 rounded-full object-cover sm:h-16 sm:w-16 lg:h-20 lg:w-20"
             priority
           />
-          <span className="font-heading text-2xl font-bold leading-none text-primary-dark sm:text-3xl lg:text-4xl">
+          <span className="font-heading text-xl font-bold leading-none text-primary-dark sm:text-3xl lg:text-4xl">
             Midlothian <span className="block">Wildflowers</span>
           </span>
         </Link>

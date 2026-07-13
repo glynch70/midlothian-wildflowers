@@ -49,7 +49,6 @@ export function Hero() {
             d="M0,88 C170,126 324,120 496,82 C674,42 814,30 1002,64 C1168,94 1302,98 1440,68 L1440,120 L0,120 Z"
           />
         </svg>
-        {/* TODO: Replace this wave-only divider with approved floral divider artwork when available. */}
       </div>
     </section>
   );

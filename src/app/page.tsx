@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { CurrentActivities } from "@/components/sections/current-activities";
 import { DonationsSection } from "@/components/sections/donations-section";
 import { EventbriteSection } from "@/components/sections/eventbrite-section";
@@ -9,6 +11,14 @@ import { PartnersSection } from "@/components/sections/partners-section";
 import { ProjectCards } from "@/components/sections/project-cards";
 import { TrustSection } from "@/components/sections/trust-section";
 import { VolunteerCTA } from "@/components/sections/volunteer-cta";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Home",
+  description:
+    "Midlothian Wildflowers brings people together through grassroots conservation, wildflower meadows, outdoor learning and local action.",
+  path: "/",
+});
 
 export default function Home() {
   return (
