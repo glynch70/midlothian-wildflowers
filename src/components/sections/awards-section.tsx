@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Award, HeartHandshake, Sparkles } from "lucide-react";
+import { ArrowRight, Award, ExternalLink, HeartHandshake, Sparkles } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { siteImages } from "@/lib/images";
+import { EXTERNAL_LINKS } from "@/lib/links";
 
 export function AwardsSection() {
   return (
@@ -51,6 +52,29 @@ export function AwardsSection() {
             <p className="mt-4 text-sm font-semibold text-primary-dark/70">
               Nominations are now closed. Thank you to everyone who supported and nominated Midlothian Wildflowers.
             </p>
+            <div className="mt-5 rounded-2xl border border-white/80 bg-white/75 p-4 shadow-[0_10px_24px_rgba(46,60,28,0.08)]">
+              <p className="text-sm font-bold uppercase tracking-[0.14em] text-sky-deep">Official BBC links</p>
+              <div className="mt-3 flex flex-col gap-2 text-sm font-semibold sm:flex-row sm:flex-wrap">
+                <Link
+                  href={EXTERNAL_LINKS.bbcEnvironmentalAward}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-sky-soft px-4 py-2 text-primary-dark hover:bg-white focus-ring"
+                >
+                  BBC Environmental Award
+                  <ExternalLink size={15} aria-hidden="true" />
+                </Link>
+                <Link
+                  href={EXTERNAL_LINKS.bbcMakeADifference}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-soft-green px-4 py-2 text-primary-dark hover:bg-white focus-ring"
+                >
+                  BBC Make a Difference
+                  <ExternalLink size={15} aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
           </div>
 
           <aside className="rounded-[24px] border border-white/80 bg-white/85 p-6 shadow-[0_16px_38px_rgba(46,60,28,0.1)] md:p-8">
