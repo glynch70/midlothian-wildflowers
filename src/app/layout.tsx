@@ -8,7 +8,7 @@ import "./globals.css";
 
 const siteUrl = "https://www.midlothianwildflowers-co.uk";
 const siteDescription =
-  "Sunny, grassroots conservation projects, outdoor learning and community action for people, places and wildlife across Midlothian.";
+  "Grassroots conservation, outdoor learning and community action across Midlothian. BBC Make a Difference Awards 2026 Environment finalist.";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -66,6 +66,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     areaServed: "Midlothian, Scotland",
     description: siteDescription,
     email: EXTERNAL_LINKS.email,
+    award: "BBC Make a Difference Awards 2026 Environment category finalist",
   };
 
   return (

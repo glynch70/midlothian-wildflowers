@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { CurrentActivities } from "@/components/sections/current-activities";
 import { DonationsSection } from "@/components/sections/donations-section";
 import { FacebookCTA } from "@/components/sections/facebook-cta";
+import { PartnersSection } from "@/components/sections/partners-section";
+import { TeamSection } from "@/components/sections/team-section";
 import { TrustSection } from "@/components/sections/trust-section";
 import { VolunteerCTA } from "@/components/sections/volunteer-cta";
 import { volunteerRoles } from "@/lib/content";
@@ -14,18 +16,19 @@ import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Get Involved",
-  description: "Volunteer with Midlothian Wildflowers and help restore habitats across Midlothian.",
+  description:
+    "Volunteer with Midlothian Wildflowers, support partnerships and get involved in community conservation across Midlothian.",
   path: "/get-involved",
 });
 
 const getInvolvedActions = [
   {
-    label: "Volunteer with MWF",
-    href: `mailto:${EXTERNAL_LINKS.email}`,
+    label: "Volunteer with us",
+    href: "/contact",
     icon: Users,
   },
   {
-    label: "View Volunteer Scotland opportunities",
+    label: "Become a volunteer",
     href: EXTERNAL_LINKS.volunteerScotland,
     icon: Users,
   },
@@ -61,12 +64,17 @@ export default function GetInvolvedPage() {
             Get involved in local action
           </h1>
           <p className="mt-6 text-lg leading-8 text-primary-dark/78">
-            Volunteer, attend events, donate or follow along on Facebook to support community-led conservation across
-            Midlothian.
+            Whether you have an hour to spare, would like to join a local event or want to become a regular volunteer,
+            we would love to hear from you.
+          </p>
+          <p className="mt-4 text-base leading-8 text-primary-dark/72">
+            You can get involved in community planting days, habitat restoration, wildflower projects, nature
+            activities, practical conservation and local events across Midlothian. No specialist experience is needed.
+            Bring your enthusiasm, suitable outdoor clothing and a willingness to help.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Button asChild size="lg">
-              <Link href={EXTERNAL_LINKS.volunteerScotland}>Volunteer Scotland Opportunities</Link>
+              <Link href="/contact">Become a volunteer</Link>
             </Button>
             <Button asChild size="lg" className="bg-sunshine text-primary-dark hover:bg-[#f8d85e]">
               <Link href={EXTERNAL_LINKS.eventbrite}>Find Upcoming Events</Link>
@@ -79,6 +87,7 @@ export default function GetInvolvedPage() {
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {getInvolvedActions.map((action) => {
               const Icon = action.icon;
+              const isExternal = action.href.startsWith("http");
 
               return (
                 <Button
@@ -88,7 +97,11 @@ export default function GetInvolvedPage() {
                   variant="outline"
                   className="h-full justify-start rounded-[18px] text-left whitespace-normal"
                 >
-                  <Link href={action.href}>
+                  <Link
+                    href={action.href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noopener noreferrer" : undefined}
+                  >
                     <Icon size={18} aria-hidden="true" />
                     {action.label}
                   </Link>
@@ -98,11 +111,18 @@ export default function GetInvolvedPage() {
           </div>
         </div>
       </section>
-      <VolunteerCTA />
-      <CurrentActivities />
       <section className="section-padding bg-white">
         <div className="container">
-          <h2 className="font-heading text-4xl font-bold text-primary-dark">Friendly ways to help outdoors</h2>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-sky-deep">Volunteer with us</p>
+            <h2 className="font-heading text-4xl font-bold text-primary-dark md:text-5xl">
+              Friendly ways to help outdoors
+            </h2>
+            <p className="mt-5 leading-8 text-foreground/75">
+              Join friendly conservation sessions, community planting days, habitat restoration projects and local
+              events across Midlothian.
+            </p>
+          </div>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {volunteerRoles.map((role) => (
               <div
@@ -116,8 +136,17 @@ export default function GetInvolvedPage() {
               </div>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <Button asChild size="lg" className="w-full bg-sunshine text-primary-dark hover:bg-[#f8d85e] sm:w-auto">
+              <Link href="/contact">Become a volunteer</Link>
+            </Button>
+          </div>
         </div>
       </section>
+      <PartnersSection />
+      <TeamSection />
+      <VolunteerCTA />
+      <CurrentActivities />
       <DonationsSection />
       <TrustSection />
       <FacebookCTA />

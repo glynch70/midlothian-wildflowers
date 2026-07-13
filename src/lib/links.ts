@@ -5,5 +5,7 @@ export const EXTERNAL_LINKS = {
   volunteerScotland:
     "https://volunteer.scot/search?keywords=midlothian+wildflowers&location=&lat=&lon=&display=list&sort=relevance",
   threeHaresWoodland: "https://three-hares-woodland.org/",
+  helpfulHerbs: "https://www.helpfulherbs.co.uk/",
+  faldonsideEco: "https://faldonsideeco.com/",
   email: "midlothianwildflowers@gmail.com",
 } as const;

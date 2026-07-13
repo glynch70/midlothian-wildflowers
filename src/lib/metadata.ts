@@ -21,6 +21,7 @@ export function createPageMetadata({ title, description, path }: PageMetadataOpt
       description,
       url: path,
       siteName,
+      locale: "en_GB",
       images: [
         {
           url: defaultImage,

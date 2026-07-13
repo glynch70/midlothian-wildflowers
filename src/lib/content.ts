@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   ShoppingBasket,
   Sprout,
+  Star,
   Trees,
   Users,
   Wheat,
@@ -204,13 +205,85 @@ export const currentActivities = [
 ];
 
 export const partners = [
-  { name: "Three Hares Community Woodland", href: EXTERNAL_LINKS.threeHaresWoodland },
-  { name: "Midlothian Climate Action", href: "https://www.midlothianclimateaction.org/" },
-  { name: "Midlothian Council", href: "https://www.midlothian.gov.uk/" },
-  { name: "Growing Families", href: "#" },
-  { name: "Pauline & Colin Macpherson", href: "#" },
-  { name: "Rosewell & District Community Council", href: "#" },
-  { name: "Rosewell Parish Church", href: "#" },
+  {
+    name: "Three Hares Community Woodland",
+    description: "Community woodland conservation and volunteer activity.",
+    href: EXTERNAL_LINKS.threeHaresWoodland,
+    icon: Trees,
+    tags: ["Woodland care", "Conservation"],
+  },
+  {
+    name: "Helpful Herbs",
+    description: "Health through herbalism and plant remedies.",
+    href: EXTERNAL_LINKS.helpfulHerbs,
+    icon: Leaf,
+    tags: ["Herbalism", "Plant remedies"],
+  },
+  {
+    name: "Faldonside Eco",
+    subtitle: "Forest School Partnership",
+    description: "Outdoor learning in the Scottish Borders.",
+    href: EXTERNAL_LINKS.faldonsideEco,
+    icon: GraduationCap,
+    tags: ["Forest school", "Outdoor learning", "Nature education", "Community learning"],
+  },
+  {
+    name: "Midlothian Climate Action",
+    description: "Local climate action and community environmental work.",
+    href: "https://www.midlothianclimateaction.org/",
+    icon: Sprout,
+    tags: ["Climate action", "Community"],
+  },
+  {
+    name: "Midlothian Council",
+    description: "Local authority support for community and greenspace work.",
+    href: "https://www.midlothian.gov.uk/",
+    icon: MapPin,
+    tags: ["Greenspaces", "Local support"],
+  },
+  {
+    name: "Growing Families",
+    description: "Community connection, wellbeing and family growing opportunities.",
+    href: "#",
+    icon: Users,
+    tags: ["Families", "Community"],
+  },
+  {
+    name: "Pauline & Colin Macpherson",
+    description: "Local land and community support for practical nature work.",
+    href: "#",
+    icon: HeartHandshake,
+    tags: ["Local support", "Partnership"],
+  },
+  {
+    name: "Rosewell & District Community Council",
+    description: "Community council support for local place-based action.",
+    href: "#",
+    icon: HandHeart,
+    tags: ["Rosewell", "Community"],
+  },
+  {
+    name: "Rosewell Parish Church",
+    description: "Local community partnership and shared support.",
+    href: "#",
+    icon: Star,
+    tags: ["Community", "Place"],
+  },
+];
+
+export const teamMembers = [
+  {
+    name: "Julia Wildflowers",
+    role: "Partnerships Lead",
+    note: "Helping build relationships with local organisations, volunteers and community partners across Midlothian.",
+    initials: "JW",
+  },
+  {
+    name: "Chloe Bruce",
+    role: "Treasurer",
+    note: "Master Herbalist",
+    initials: "CB",
+  },
 ];
 
 export const trustItems = [

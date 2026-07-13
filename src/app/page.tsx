@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { AwardsCallout } from "@/components/sections/awards-callout";
+import { AwardsSection } from "@/components/sections/awards-section";
 import { CurrentActivities } from "@/components/sections/current-activities";
 import { DonationsSection } from "@/components/sections/donations-section";
 import { EventbriteSection } from "@/components/sections/eventbrite-section";
@@ -16,7 +18,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createPageMetadata({
   title: "Home",
   description:
-    "Midlothian Wildflowers brings people together through grassroots conservation, wildflower meadows, outdoor learning and local action.",
+    "Midlothian Wildflowers brings communities together through wildflower planting, conservation and outdoor learning. BBC Make a Difference Awards 2026 Environment finalist.",
   path: "/",
 });
 
@@ -24,10 +26,12 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <AwardsSection />
       <Mission />
       <ProjectCards />
       <CurrentActivities />
       <GallerySection />
+      <AwardsCallout />
       <EventbriteSection />
       <VolunteerCTA />
       <DonationsSection />
